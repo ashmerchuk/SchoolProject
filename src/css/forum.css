@@ -31,6 +31,7 @@ h3{
 
 .forum-section {
   background-color: whitesmoke;
+  opacity: 0.97;
   z-index: 12;
   width: 100%;
   display: flex;
