@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/aboutUs.css">
-    <link rel="stylesheet" href="../css/kontakt.css">
+    <link rel="stylesheet" href="../css/forum.css">
     <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
     <title>Holidays Travel Pro GmbH</title>
     <script type="module" src="../index.js"></script>
+    <script type="module" src="../script/forum.js"></script>
 </head>
 
 <body>
@@ -24,24 +25,18 @@
         <video src="../../assets/videos/contact.mp4" muted loop autoplay></video>
         <div class="overlay"></div>
         <div class="text" style="width:100%">
-            <h1>Lass uns wissen</h1>
-            <h3 style="font-size: 350%;">was du denkst</h3>
-
+            <h3 style="font-size: 350%;">Forum</h3>
+            <h1>Schreib mal gerne in die Kommentare</h1>
+        </div>
+        <div class="comments-container" id="commentsContainer">
         </div>
         <div class="contact-form-container">
-            <form action="https://formsubmit.co/26bcb6f6573501b85a2aa2bc230435c7" method="POST">
-                <input type="hidden" name="_next" value="http://127.0.0.1:5500/LF01/blockprojekt/SchoolProject/src/Pages/contact-success.html">
-                <input type="hidden" name="_captcha" value="false">
+            <form action="/" id="commentForm">
                 <label for="fname">Name</label>
-                <input type="text" id="nameId" name="name" placeholder="Dein Name" required>
-            
-                <label for="lname">E-mail</label>
-                <input type="text" id="emailId" name="email" placeholder="dein e-mail" required>
-            
+                <input type="text" id="nameId" name="name" placeholder="Dein Name" required>            
                 <label for="subject">Nachricht</label>
-                <textarea id="subject" name="subject" placeholder="Schreib mal gerne uns" style="height:100px" required></textarea>
-            
-                <input type="submit" value="Submit">
+                <textarea id="comment" name="subject" placeholder="Schreib mal gerne uns" style="height:100px" required></textarea>
+                <input type="button" class="submit-comment-button" value="Submit">
               </form>
         </div>
         <ul class="social">
@@ -65,7 +60,6 @@
             <li><a href="karriere.html">DREAM KARRIERE</a></li>
             <li><a href="ds.html">DATENSCHUTZ</a></li>
             <li><a href="kontakt.html">KONTAKT</a></li>
-            <li><a href="forum.html">FORUM</a></li>
         </ul>
     </div>
     <script>

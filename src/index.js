@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
-import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+import { getFirestore, collection, addDoc, query, getDocs, limit } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 const firebaseConfig = {
@@ -23,3 +23,30 @@ onAuthStateChanged(_fireAuth, (user) => {
     console.log('not yet logged');
   }
 });
+
+export async function  addComment(name, content) {
+  let comment = {
+      name: name,
+      content: content,
+      date: new Date()
+  }
+  try {
+    const docRef = await addDoc(collection(_firestore, "comments"), comment);
+    console.log("Document written with ID: ", docRef.id, comment);
+    alert('Danke ' + name + ', dein Kommentar wurde hinzugefügt')
+  } catch (e) {
+    console.error("Error adding document: ", e);
+    alert('Sorry ' + name + ', es gab ein Problem: ' + e);
+  }
+}
+
+export async function getComments() {
+  const commentsQuery = query(
+    collection(_firestore, 'comments'),
+    limit(10)
+  );
+  const querySnapshot = await getDocs(commentsQuery);
+  querySnapshot.forEach(snap  => {
+    console.log(snap.data());
+  });;
+}
