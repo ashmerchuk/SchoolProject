@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js';
-import { getFirestore, collection, addDoc, query, getDocs, limit } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+import { getFirestore, collection, addDoc, query, getDocs, limit, orderBy } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
 import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js';
 
 const firebaseConfig = {
@@ -43,10 +43,13 @@ export async function  addComment(name, content) {
 export async function getComments() {
   const commentsQuery = query(
     collection(_firestore, 'comments'),
+    orderBy('date'),
     limit(10)
   );
   const querySnapshot = await getDocs(commentsQuery);
+  let comments = [];
   querySnapshot.forEach(snap  => {
-    console.log(snap.data());
-  });;
+    comments.push(snap.data());
+  });
+  return comments;
 }
