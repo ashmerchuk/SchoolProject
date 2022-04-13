@@ -15,32 +15,33 @@
   <body>
     <section class="showcase">
       <header>
-        <a href="index.html">
+        <a href="../index.html">
           <h2 class="logo">Holidays Travel Pro GmbH</h2>
         </a>
         <div class="toggle"></div>
       </header>
       <video src="../../assets/videos/contact.mp4" muted loop autoplay></video>
       <div class="overlay"></div>
-      <div class="forum-section">
+      <div class="forum-section" style="width: 50%">
         <div class="text" style="width: 100%">
           <h3 style="font-size: 350%">Forum</h3>
           <h1>Schreib mal gerne in die Kommentare</h1>
         </div>
         <div class="forum-container">
           <div class="contact-form-container">
-            <form action="/" id="commentForm">
-              <label for="fname">Name</label>
+            <form action="/" id="commentForm" ">
+              <label for="fname" style="color: black;">Name</label>
               <input type="text" id="nameId" name="name" placeholder="Dein Name" required />
-              <label for="subject">Nachricht</label>
+              <label for="subject" style="color: black;">Nachricht</label>
               <textarea id="comment" name="subject" placeholder="Schreib mal gerne uns" style="height: 100px" required></textarea>
               <input type="button" class="submit-comment-button" value="Submit" />
             </form>
           </div>
-          <div class="comments-container" id="commentsContainer">
+        </div>
+        <h3>DISKUSSION</h3>
+        <div style="margin-left: 2%;" class="comments-container" id="commentsContainer">
             <div id="commentsChild"></div>
           </div>
-        </div>
       </div>
       <ul class="social">
         <li>
