@@ -75,6 +75,16 @@ a {
     text-decoration: none
 }
 
+b{
+    color: cornflowerblue;
+}
+pre{
+    color: #fff;
+}
+/* h3{
+    color: cornflowerblue;
+} */
+
 .overlay {
     position: absolute;
     top: 0;
@@ -89,7 +99,7 @@ a {
 .text {
     position: relative;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .text h1 {
     color: rgb(0, 174, 255);
