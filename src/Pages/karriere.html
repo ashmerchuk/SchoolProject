@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/aboutUs.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <title>Angebot</title>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <a href="../index.html">
+                <h2 class="logo">Holidays Travel Pro GmbH</h2>
+            </a>
+            <div class="toggle"></div>
+        </header>
+        <video src="../../assets/videos/countries.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h1>Wir suchen</h1>
+            <h1 style="color: white;">Auszubildende Fachinformatiker für Anwendungsentwicklung</h1>
+            <h1>Wir bieten</h1>
+            <pre>
+                Möglichkeit bei uns mit Senioren (Front und Backend zu lernen)
+                Gleitzeit (ab dem 2. Lehrjahr Homeoffice Möglichkeit)
+                Ein gutes Betriebsklima in einem tollen Team
+                Zuschuss zur HVV-Monatskarte
+                Eine attraktive Vergütung (Weihnachtsgeld, Urlaubsgeld und und 13. Monatsgehalt)
+                30 Urlaubstagen
+
+                Aus - Weiterbildung
+                Bei uns hast Du die Möglichkeit auf zwei Abschlüsse innerhalb von 4 Jahren:
+                -nach 3 Jahren den Abschluss zum Fachinformatiker (m/w/d)
+                -nach insgesamt 4 Jahren den Bachelor of Science in Informatik.
+
+            </pre>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a>
+            </li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="aboutUs.html">ÜBER DREAM FIRMA</a></li>
+            <li><a href="Team.html">DREAM TEAM</a></li>
+            <li><a href="karriere.html">DREAM KARRIERE</a></li>
+            <li><a href="ds.html">DATENSCHUTZ</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+
+
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>

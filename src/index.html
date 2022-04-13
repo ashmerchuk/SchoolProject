@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <title>Holidays Travel Pro GmbH</title>
+    <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <a href="index.html">
+                <h2 class="logo">Holidays Travel Pro GmbH</h2>
+            </a>
+            <div class="toggle"></div>
+        </header>
+        <video src="../assets/videos/Video3.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h3>Entdecke die Welt</h3>
+            <h1 style="font-size: 350%;">mit uns</h1>
+                <p style="font-size: 200%; color: rgb(255, 255, 255); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                Arbeit, Reisen, Spaß
+            </p>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a>
+            </li>
+        </ul>
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Pages/aboutUs.html">ÜBER DREAM FIRMA</a></li>
+            <li><a href="Pages/Team.html">DREAM TEAM</a></li>
+            <li><a href="Pages/karriere.html">DREAM KARRIERE</a></li>
+            <li><a href="Pages/ds.html">DATENSCHUTZ</a></li>
+            <li><a href="Pages/kontakt.html">KONTAKT</a></li>
+
+
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>
