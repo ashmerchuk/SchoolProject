@@ -44,7 +44,7 @@ export async function getComments() {
   const commentsQuery = query(
     collection(_firestore, 'comments'),
     orderBy('date'),
-    limit(10)
+    limit(40)
   );
   const querySnapshot = await getDocs(commentsQuery);
   let comments = [];
