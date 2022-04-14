@@ -172,6 +172,11 @@ pre{
     transform: scale(0.5) translateY(-15px);
 }
 
+.list {
+    color: white;
+    padding-left: 30px;
+}
+
 .menu {
     position: absolute;
     top: 0;
