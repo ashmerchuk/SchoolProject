@@ -20,7 +20,7 @@ commentButton.addEventListener('click', () => {
   }
   addComment(name.value, comment.value);
   fillComments();
-  name.value = '', comment.value = '';
+  (name.value = ''), (comment.value = '');
 });
 
 function fillComments() {
@@ -28,11 +28,12 @@ function fillComments() {
     let htmlToInsert = '';
     comments = res;
     comments.forEach((comment) => {
+      let date = new Date(comment.date.seconds * 1000)
       htmlToInsert += `
                 <div class="comment-card">
-                    <h4>${comment.name}</h4>
-                    <p>${comment.content}</p>
-                    <hr>
+                  <div class="date-label">${date.getDate()}.${date.getUTCMonth()}.${date.getUTCFullYear()}</div>
+                  <p class="comment-content">${comment.content}</p>
+                  <h4 class="author-label">${comment.name}</h4>
                 </div>
                 `;
     });

@@ -51,5 +51,6 @@ export async function getComments() {
   querySnapshot.forEach(snap  => {
     comments.push(snap.data());
   });
+  comments.reverse();
   return comments;
 }
